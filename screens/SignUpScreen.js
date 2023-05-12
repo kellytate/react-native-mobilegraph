@@ -9,7 +9,7 @@ const SignUpScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Image source={{ uri: INSTAGRAM_LOGO, width: 100, height: 100 }} />
+        <Image source={{ uri: LOGO, width: 100, height: 100 }} />
       </View>
       <SignUpForm navigation={navigation} />
     </View>
