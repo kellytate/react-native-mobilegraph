@@ -10,7 +10,7 @@ import {
   arrayRemove,
 } from '../firebase'
 
-const Post = ({ post }) => {
+const Post = ({ post, handlePostUpdate }) => {
   const auth = getAuth()
   const db = getFirestore()
 
@@ -28,6 +28,7 @@ const Post = ({ post }) => {
     } catch (error) {
       console.log('Error updating document: ', error)
     }
+    handlePostUpdate();
   }
 
   return (
