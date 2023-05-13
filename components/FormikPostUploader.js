@@ -31,20 +31,21 @@ const FormikPostUploader = ({ navigation }) => {
   const auth = getAuth()
   const db = getFirestore()
 
-  useEffect(() => getProfile(), [])
-
-  const getProfile = async () => {
-    const userDocRef = doc(db, `users/${auth.currentUser.email}`)
-    const docSnap = await getDoc(userDocRef)
-    const data = docSnap.data()
-
-    setProfile({
-      username: data.username,
-      pic: data.pic,
-      uid: data.uid,
-      email: data.email
-    })
-  }
+  useEffect(() => {
+    const getProfile = async () => {
+      const userDocRef = doc(db, `users/${auth.currentUser.email}`)
+      const docSnap = await getDoc(userDocRef)
+      const data = docSnap.data()
+  
+      setProfile({
+        username: data.username,
+        pic: data.pic,
+        uid: data.uid,
+        email: data.email
+      })
+    }
+    getProfile();
+  }, [])
 
   const addPost = (imageUrl, caption) =>
     addDoc(collection(db, `users/${auth.currentUser.email}`, 'posts'), {
