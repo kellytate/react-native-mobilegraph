@@ -7,7 +7,7 @@ const AuthNavigation = () => {
 
   const userHandler = (user) =>
     user ? setCurrentUser(user) : setCurrentUser(null)
-
+  
   useEffect(() => onAuthStateChanged(auth, (user) => userHandler(user)), [])
   return <>{currentUser ? <SignedInStack /> : <SignedOutStack />}</>
 }
