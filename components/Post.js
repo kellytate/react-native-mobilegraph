@@ -24,11 +24,11 @@ const Post = ({ post, handlePostUpdate }) => {
           ? arrayUnion(auth.currentUser.email)
           : arrayRemove(auth.currentUser.email),
       })
+      handlePostUpdate();
       console.log('Document successfully updated!')
     } catch (error) {
       console.log('Error updating document: ', error)
     }
-    handlePostUpdate();
   }
 
   return (
