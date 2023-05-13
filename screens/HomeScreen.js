@@ -17,18 +17,6 @@ const HomeScreen = ({ navigation }) => {
   const [posts, setPosts] = useState([])
   const db = getFirestore()
 
-  // const getPosts = async () => {
-  //   const posts = query(
-  //     collectionGroup(db, 'posts'),
-  //     orderBy('timestamp', 'desc')
-  //   )
-  //   const snapshot = await getDocs(posts)
-
-  //   setPosts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
-  // }
-
-  // useEffect(() => getPosts(), [])
-
   useEffect(() => {
     const getPosts = async () => {
       const posts = query(
@@ -39,7 +27,7 @@ const HomeScreen = ({ navigation }) => {
   
       setPosts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
     }
-  getPosts();
+    getPosts();
   }, []);
 
   return (
