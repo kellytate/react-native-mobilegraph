@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import Post from '../components/Post'
 import Stories from '../components/Stories'
 import { TABS } from '../data/tabs'
+import { POSTS } from '../data/posts'
 import {
   collectionGroup,
   getFirestore,
