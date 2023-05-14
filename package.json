@@ -1,11 +1,10 @@
 {
   "name": "mobilegraph",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -13,6 +12,7 @@
     "@react-navigation/stack": "^6.3.16",
     "email-validator": "^2.0.4",
     "expo": "~48.0.15",
+    "expo-constants": "~14.2.1",
     "expo-status-bar": "~1.4.4",
     "firebase": "^9.21.0",
     "formik": "^2.2.9",
@@ -26,7 +26,8 @@
     "react-native-web": "~0.18.10",
     "use-async-effect": "^2.2.7",
     "valid-url": "^1.0.9",
-    "yup": "^1.1.1"
+    "yup": "^1.1.1",
+    "expo-splash-screen": "~0.18.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
