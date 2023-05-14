@@ -17,6 +17,7 @@ export const SignedInStack = () => (
     <Stack.Navigator initialRouteName="HomeScreen" screenOptions={screenOption}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="NewPostScreen" component={NewPostScreen} />
+      <Stack.Screen name="Add" component={Add} />
     </Stack.Navigator>
   </NavigationContainer>
 )
