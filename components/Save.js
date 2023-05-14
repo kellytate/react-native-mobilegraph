@@ -2,20 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { View, TextInput, Image, Button } from 'react-native'
 
 import * as firebase from '../firebase'
-import { NavigationContainer } from '@react-navigation/native'
 require("firebase/firestore")
 require("firebase/storage")
 
-// import { storage } from '../firebase'
-import { getStorage, ref, uploadBytes, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
 import {auth, db, collection, serverTimestamp} from '../firebase'
 
 export default function Save(props) {
     const [profile, setProfile] = useState(null)
-
     const [caption, setCaption] = useState("")
-    // const auth = firebase.getAuth()
-    // const db = firebase.getFirestore()
     const storage = getStorage()
 
     useEffect(() => {
@@ -82,33 +77,6 @@ export default function Save(props) {
             
           }
         );
-
-
-        // const task = (storage) => {
-        //   // const childPathRef = ref(storage, childPath)
-        //   uploadBytes(storageRef, blob).then((snapshot) => {
-        //     console.log('file uploaded')
-        //   })
-        // }
-
-        // task(storage)
-
-        // const taskProgress = snapshot => {
-        //     console.log(`transferred: ${snapshot.bytesTransferred}`)
-        // }
-
-        // const taskCompleted = () => {
-        //     task.snapshot.ref.getDownloadURL().then((snapshot) => {
-        //         savePostData(snapshot);
-        //         console.log(snapshot)
-        //     })
-        // }
-
-        // const taskError = snapshot => {
-        //     console.log(snapshot)
-        // }
-
-        // task.on("state_changed", taskProgress, taskError, taskCompleted);
     }
 
     const savePostData = (imageUrl) => {
@@ -124,20 +92,6 @@ export default function Save(props) {
         liked: [],
         comments: [],
       }).then(() => props.navigation.push('HomeScreen'))
-
-
-
-        // firebase.firestore()
-        //     .collection('posts')
-        //     .doc(firebase.auth().currentUser.uid)
-        //     .collection("userPosts")
-        //     .add({
-        //         downloadURL,
-        //         caption,
-        //         creation: firebase.firestore.FieldValue.serverTimestamp()
-        //     }).then((function () {
-        //         props.navigation.popToTop()
-        //     }))
     }
     return (
         <View style={{ flex: 1 }}>
