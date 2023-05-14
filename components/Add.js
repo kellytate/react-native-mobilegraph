@@ -20,15 +20,35 @@ export default function Add() {
 
   return (
     <View style={styles.container}>
-      <Camera style={styles.camera} type={type}>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={toggleCameraType}>
-            <Text style={styles.text}>Flip Camera</Text>
-          </TouchableOpacity>
-        </View>
-      </Camera>
+      <View style={styles.container}>
+        <Camera style={styles.camera} type={type}>
+          
+        </Camera>
+      </View>
+      
+      <TouchableOpacity style={styles.button} onPress={toggleCameraType}>
+        <Text style={styles.text}>Flip Camera</Text>
+      </TouchableOpacity>
+    
     </View>
   );
 }
 
-// const styles = StyleSheet.create({ ... }); 
+const styles = StyleSheet.create({ 
+  camera: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+  },
+  button: {
+    flex: 0.1,
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 18,
+    marginBottom: 10,
+    color: 'white',
+  },
+ }); 
