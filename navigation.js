@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen'
 import NewPostScreen from './screens/NewPostScreen'
 import LoginScreen from './screens/LoginScreen'
 import SignUpScreen from './screens/SignUpScreen'
+import Add from './components/Add'
 
 const Stack = createStackNavigator()
 const screenOption = {

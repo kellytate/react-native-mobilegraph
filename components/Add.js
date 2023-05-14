@@ -20,14 +20,11 @@ export default function Add() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.container}>
-        <Camera style={styles.camera} type={type}>
-          
-        </Camera>
+      <View style={[styles.cameraContainer, styles.fixedRatio]}>
+        <Camera style={[styles.camera, styles.fixedRatio]} type={type} ratio={'1:1'} />
       </View>
       
-      <TouchableOpacity style={styles.button} onPress={toggleCameraType}>
-        <Text style={styles.text}>Flip Camera</Text>
+      <TouchableOpacity style={styles.button} onPress={toggleCameraType} title="Flip Image">
       </TouchableOpacity>
     
     </View>
@@ -38,8 +35,13 @@ const styles = StyleSheet.create({
   camera: {
     flex: 1,
   },
-  container: {
+  fixedRatio: {
     flex: 1,
+    aspectRatio: 1,
+  },
+  cameraContainer: {
+    flex: 1,
+    flexDirection: 'row',
   },
   button: {
     flex: 0.1,
