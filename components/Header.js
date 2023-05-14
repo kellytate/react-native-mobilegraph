@@ -23,7 +23,7 @@ const Header = ({ navigation }) => {
       </TouchableOpacity>
 
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.push('Add')}>
+        <TouchableOpacity onPress={() => navigation.push('AddFromGallery')}>
           <Image
             style={styles.icon}
             source={{
