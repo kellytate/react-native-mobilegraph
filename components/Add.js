@@ -39,7 +39,7 @@ export default function Add({ navigation }) {
     });
     console.log(result);
 
-    if (!result.cancelled) {
+    if (!result.canceled) {
       setImage(result.uri);
     }
   };
