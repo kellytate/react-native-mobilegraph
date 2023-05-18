@@ -94,7 +94,7 @@ export default function Save(props) {
       }).then(() => props.navigation.push('HomeScreen'))
     }
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, marginTop: 100 }}>
             <Image source={{ uri: props.route.params.image }} />
             <TextInput
                 placeholder="Write a Caption . . ."
