@@ -18,7 +18,7 @@ const Header = ({ navigation }) => {
       <TouchableOpacity onPress={signOutUser}>
         <Image
           style={styles.logo}
-          source={require('../assets/header-logo.png')}
+          source={require('../assets/mobilegraph.png')}
         />
       </TouchableOpacity>
 

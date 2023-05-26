@@ -21,7 +21,7 @@ export const TABS = [
   },
   {
       name: 'Profile',
-      active: 'https://avatars.githubusercontent.com/u/29388627?v=4',
-      inactive: 'https://avatars.githubusercontent.com/u/29388627?v=4'
+      active: 'https://media.licdn.com/dms/image/D5603AQHKteXCko66WQ/profile-displayphoto-shrink_800_800/0/1681237445179?e=1689206400&v=beta&t=tcUPbypxb5hAeLQTdIpxIYgx8SGvEUUMaNYOIq2_XNs',
+      inactive: 'https://media.licdn.com/dms/image/D5603AQHKteXCko66WQ/profile-displayphoto-shrink_800_800/0/1681237445179?e=1689206400&v=beta&t=tcUPbypxb5hAeLQTdIpxIYgx8SGvEUUMaNYOIq2_XNs'
   },
 ]
